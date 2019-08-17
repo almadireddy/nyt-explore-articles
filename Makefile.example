@@ -1,0 +1,6 @@
+# fill in the path to your json credential files before you run
+run:
+	GOOGLE_APPLICATION_CREDENTIALS="" \
+	REDIS_HOST="" \
+	REDIS_PORT="" \
+	PORT=8080 go run .

@@ -1,0 +1,11 @@
+runtime: go112
+service: nyt-explore-articles-api
+handlers:
+  - url: /.*
+    script: auto
+env_variables:
+  SENDGRID_API_KEY: "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"
+  REDIS_HOST: "10.0.0.3"
+  REDIS_PORT: 6379
+vpc_access_connector:
+  name: "projects/nyt-explore-prd/locations/us-east1/connectors/articles"

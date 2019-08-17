@@ -1,0 +1,11 @@
+pipeline:
+  deploy-prd:
+    image: nytimes/drone-gae
+    action: deploy
+    project: nyt-explore-prd
+    app_file: app.yaml
+    version: "${DRONE_COMMIT}"
+    secrets: [gae_credentials]
+    when:
+      event: push
+      branch: [master]
